@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+<!--        http://.../hello?cnt=3  -->
+<!--        input 태그의 name을 키로하는 쿼리스트링이 만들어져 나간다.-->
+        <form action="hello">
+            <div>
+                <label>"안녕하세요"를 몇번 듣고 싶으세요?</label>
+            </div>
+            <div>
+                <input type="text" name="cnt"/>
+                <input type="submit" value="출력"/>
+            </div>
+        </form>
+    </div>
+    <p>환영합니다.</p>
+    <a href="hello">인사하기</a><br>
+    <a href="hello?cnt=3">인사하기</a><br>
+    <a href="reg.html">등록하기</a><br>
+    <a href="add.html">더하기</a><br>
+    <a href="calc.html">계산하기</a><br>
+    <a href="add2.html">배열로 더하기</a><br>
+    <div>
+        <form action="life-cycle" method="post">
+            <input type="submit" value="Life Cycle"/>
+        </form>
+    </div>
+    <a href="calc2.html">계산기</a><br>
+    <div>
+        <form action="session-invalidate" method="post">
+            <input type="submit" value="세션 초기화"/>
+        </form>
+    </div>
+    <a href="calc3.html">계산기(Calc3)</a><br>
+</body>
+</html>
