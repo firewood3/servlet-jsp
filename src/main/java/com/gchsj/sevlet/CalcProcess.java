@@ -39,15 +39,20 @@ public class CalcProcess extends HttpServlet {
             } catch (ScriptException e) {
                 e.printStackTrace();
             }
-        } else {
+        } else if(op!=null && op.equals("C")) {
+            exp = "";
+        }
+        else {
             exp += (value == null)? "":value;
             exp += (op == null)? "":op;
             exp += (dot == null)? "":dot;
         }
 
         Cookie cookie = new Cookie("exp", exp);
+        if(op!=null && op.equals("C")) {
+            cookie.setMaxAge(0);
+        }
         response.addCookie(cookie);
-
         response.sendRedirect("calc-page");
     }
 }
